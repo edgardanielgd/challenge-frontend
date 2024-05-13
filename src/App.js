@@ -17,7 +17,7 @@ function App() {
     <div className="App">
       <ToastContainer />
       <Navbar />
-      <BrowserRouter basename='/'>
+      <BrowserRouter>
         <Routes>
           <Route path="/" element={<Home />} />
 
