@@ -1,0 +1,12 @@
+.home-Paragraph {
+    padding: 30px;
+    margin: 20px;
+    border: var(--primary-color) 2px solid;
+    border-radius: 10px;
+    font-size: 1.5rem;
+    color: black;
+}
+
+.home-button {
+    font-size: 1.5rem;
+}

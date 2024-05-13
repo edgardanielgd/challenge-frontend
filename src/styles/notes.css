@@ -1,0 +1,78 @@
+.section-title {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    color: var(--primary-color);
+    text-align: center;
+}
+
+.categories-container {
+    border: var(--primary-color) 2px solid;
+    border-radius: 10px;
+    padding-bottom: 20px;
+}
+
+.category-badge {
+    font-size: 1rem !important;
+    font-weight: bold;
+
+    margin: auto !important;
+    margin-top: 10px !important;
+    border: var(--primary-color) 2px solid;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.category-badge span {
+    font-size: 1.2rem !important;
+    font-weight: normal;
+    border-radius: 10px;
+    padding: 2px;
+    margin: auto;
+    cursor: pointer;
+}
+
+.note-card {
+    display: flex;
+    flex-direction: column;
+
+    border: var(--primary-color) 2px solid;
+    border-radius: 10px;
+
+    margin: 10px;
+    padding: 5px;
+
+    overflow: hidden;
+}
+
+.note-card .note-card-header {
+    width: 100%;
+    height: 10px;
+    padding: 0;
+    margin: 0;
+
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+}
+
+.note-add-category-dropdown {
+    max-width: 100% !important;
+    margin: 0;
+}
+
+.note-add-category-dropdown-toggle {
+    width: 70% !important;
+    background-color: var(--primary-color) !important;
+    color: var(--font-light-color) !important;
+    border: var(--primary-color) solid 1px !important;
+    border-radius: 5px;
+    margin-top: 2px;
+    margin-bottom: 5px;
+}
+
+.note-add-category-dropdown-item:focus,
+.note-add-category-dropdown-item:hover {
+    max-width: 100% !important;
+    background-color: var(--primary-color) !important;
+    color: var(--font-light-color) !important;
+}

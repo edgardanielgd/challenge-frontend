@@ -1,0 +1,38 @@
+.navbar-container {
+    max-width: 100% !important;
+    margin: 0;
+    background-color: var(--primary-color);
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.5);
+}
+
+.navbar-title {
+    font-size: 3rem;
+    font-weight: 700;
+    text-align: center;
+    color: var(--font-light-color);
+    margin: auto;
+    cursor: pointer;
+}
+
+.navbar-item:focus,
+.navbar-item:hover {
+    background-color: var(--primary-color) !important;
+    color: var(--font-light-color) !important;
+}
+
+.navbar-img {
+    width: 7em;
+    height: 7em;
+    padding: 20px;
+    margin: auto;
+    cursor: pointer;
+}
+
+.navbar-dropdown {
+    margin: auto;
+}
+
+.navbar-dropdown-toggle {
+    background-color: transparent !important;
+    border: none !important;
+}
