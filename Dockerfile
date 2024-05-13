@@ -1,29 +1,17 @@
-# Use the official Node.js runtime as the base image
-FROM node:18 as build
-
-# Set the working directory in the container
+# build step
+FROM node:16.13.2-alpine as build
+# ARG TARGET_GATEWAY=https://habitus-gateway-ik25vlw3ta-rj.a.run.app
 WORKDIR /app
-
-# Copy package.json and package-lock.json to the working directory
-COPY package*.json ./
-
-# Install dependencies
+COPY package.json ./
 RUN npm install
-
-# Copy the entire application code to the container
-COPY . .
-
-# Build the React app for production
+COPY . ./
+# ENV VITE_TARGET_GATEWAY=$TARGET_GATEWAY
+# RUN echo "VITE_TARGET_GATEWAY=$TARGET_GATEWAY" > .env
 RUN npm run build
 
-# Use Nginx as the production server
-FROM nginx:alpine
-
-# Copy the built React app to Nginx's web server directory
-COPY --from=build /app/build /usr/share/nginx/html
-
-# Expose port 80 for the Nginx server
+# release step
+FROM nginx:1.21.5-alpine as release
+COPY --from=build ./app/dist/ /etc/nginx/html/
+COPY app.conf /etc/nginx/conf.d/default.conf
 EXPOSE 80
-
-# Start Nginx when the container runs
 CMD ["nginx", "-g", "daemon off;"]
