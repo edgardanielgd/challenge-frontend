@@ -3,7 +3,7 @@ import axios from 'axios';
 class HttpClient {
     constructor() {
         this.client = axios.create({
-            baseURL: 'http://localhost:8000',
+            baseURL: 'https://challengebackend1-tqihc3ss.b4a.run',
         });
 
         this.accessToken = localStorage.getItem('accessToken');
